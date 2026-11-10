@@ -6,7 +6,7 @@
 > 复查时点：每年 WWDC 后、每个 iOS .1 版本（一年两次）。调研原文放 `research/`。
 >
 > **怎么填**：每条下面的「在 {App名}」先空着，等第一批决定定下来再补 1–3 个真实例子；「推出」写 DECISIONS 编号。
-> 这七条是换任何产品都成立的思考框架。气质类的原则（安静、有温度、好玩、动效风格…）跟着 App 的设定来，开工时问用户，定了再加在后面（编号接着往下排）。
+> 这八条是换任何产品都成立的思考框架。气质类的原则（安静、有温度、好玩、动效风格…）跟着 App 的设定来，开工时问用户，定了再加在后面（编号接着往下排）。
 
 ---
 
@@ -45,14 +45,28 @@
 - **检验**：苹果有现成的吗？用户在别的 App 里学会的，在这里还成立吗？
 - 来源：[Apple HIG](https://developer.apple.com/design/human-interface-guidelines/)（Familiarity、Branding）
 
-## 五 · 包容
+## 五 · 动效有因果、克制
+
+动效用来说明因果（点了什么、东西从哪来到哪去），不是装饰；风格怎么定按 App 的气质来，底线每个 App 都一样。
+- **在 {App名}**：{待补}
+- **底线**：
+  - 每个动作都有原因，一次只演一件事
+  - 跟手的直接跟手；高频操作（翻页、切 tab、拨一格）只跟手，不另加编排
+  - 全部用弹簧和缓动，没有匀速；全 App 只用少数几条曲线和时长，参数只在一处（`Motion.swift`）
+  - 打开「减弱动态效果」时降级为淡入淡出
+  - 真机 120Hz 不掉帧；触感只在真机上试
+- **检验**：录屏 0.25 倍速看一遍：每个动作有没有原因？有没有跳帧、先停一下再动的二段动作？
+- **推出**：DECISIONS M1；规格在 DESIGN-SYSTEM 动效一节
+- 来源：[HIG Motion](https://developer.apple.com/design/human-interface-guidelines/motion)
+
+## 六 · 包容
 
 每个人都能用：读屏、大字体、减弱动态、色弱、不同语言。
 - **在 {App名}**：{待补}
 - **检验**：打开 VoiceOver、语音控制、最大字体、减弱动态效果、降低透明度、增强对比度、粗体文本，各走一遍核心路径。信息不只靠颜色区分。
 - 来源：[HIG 设计原则 · Flexibility](https://developer.apple.com/design/human-interface-guidelines/design-principles)、[Apple 辅助功能](https://developer.apple.com/accessibility/)、App Store 辅助功能营养标签
 
-## 六 · 诚实
+## 七 · 诚实
 
 对用户诚实：数据是用户的；权限用到时才要；不装精确、不编造、不用操纵人的手段。
 - **在 {App名}**：{待补：数据存哪、权限什么时候要、AI 结果怎么标}
@@ -60,7 +74,7 @@
 - **推出**：合规台账 [business/LEGAL.md](business/LEGAL.md)
 - 来源：[HIG 设计原则 · Responsibility](https://developer.apple.com/design/human-interface-guidelines/design-principles)、Rams「好的设计是诚实的」；审核指南 5.1.1、《个人信息保护法》
 
-## 七 · 设计先行
+## 八 · 设计先行
 
 先想清楚、画出来、给人看，再做。
 - **在 {App名}**：任何布局 / 组件 / 新交互先上 Design 画布，用户认可后才写代码；宣发先做分镜再生产；截图永远不能当设计稿。
