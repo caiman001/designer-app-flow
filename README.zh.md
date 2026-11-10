@@ -86,7 +86,7 @@ rsync -a ./designer-app-flow/template/ ~/<新项目>/ && cd ~/<新项目> && git
 | `docs/SYSTEM.md` | 分工、文件放哪、怎么用 |
 | `docs/KICKOFF.md` | 开工询问项（主会话开工时逐条问你） |
 | `docs/qa/task-steps.md` · `docs/research/qa-practices.md` | 核心任务步数表；验收做法和苹果 / Anthropic 官方依据 |
-| `docs/PRINCIPLES.md` | 八条通用原则（例子待补；气质类原则按 App 设定再加） |
+| `docs/PRINCIPLES.md` | 七条通用原则（例子待补；气质类原则按 App 设定再加） |
 | `docs/i18n-glossary.md` | 多语言用词表空壳 + 通用写法规则（词按这个 App 来） |
 | `docs/DECISIONS.md` | 决定空壳 + 沿用的流程类决定 |
 | `docs/ROADMAP.md` | 唯一待办清单（分节空壳） |
@@ -109,7 +109,7 @@ rsync -a ./designer-app-flow/template/ ~/<新项目>/ && cd ~/<新项目> && git
 - **先画布后代码**：任何界面改动先出 2–3 个方向给你定，截图不能当设计稿（画布用的是 claude.ai 的 Design 画布 / Artifact，换成 Figma 也行）
 - **你拍板，AI 不替你定**：commit、push、上传、送审、发布、回评价都每次问你；发版命令只有你能触发
 - **只加字段不改语义**、**隐私政策路径不改**、**源码和网站分两个仓库**
-- 动效按迪士尼 12 动画原则、平台原生优先、包容和诚实是默认原则；气质类原则开工时按你的 App 再加
+- 平台原生优先、包容和诚实是默认原则；气质类原则开工时按你的 App 再加
 
 ## 七、更新
 
