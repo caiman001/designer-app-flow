@@ -30,7 +30,7 @@
 - iOS 17 起弃用的 API（如 `UITraitCollection(traitsFrom:)`）在 Release 出警告 → 换新 API（`modifyingTraits`）并复测行为不变
 - 旧 derivedData 里资源包缺 `Assets.car`，所有令牌颜色变透明、UI 测试乱挂 → 先看截图有没有颜色，没有就换新的 `-derivedDataPath`
 - `xcodebuild` 不同步 `.xcstrings`（只有 Xcode IDE 会）→ 查漏用编译产物里的 `*.stringsdata` 对 catalog 的 key
-- asc（第三方 App Store Connect CLI）：默认带 `ASC_READ_ONLY=1`，改动先 `--dry-run`；作者的 skill 包别装（第三方审计报过钥匙串风险）；`.asc/`、`*.p8` 进 `.gitignore`
+- [asc](https://github.com/rorkai/App-Store-Connect-CLI)（第三方开源 App Store Connect 命令行）：默认带 `ASC_READ_ONLY=1`，改动先 `--dry-run`，用户确认再 `--confirm`；我们只用它的命令行，没装它附带的 skill 包；API 密钥由用户自己生成、自己 `asc auth login`，`.asc/`、`*.p8` 进 `.gitignore`
 - asc 两把密钥：App 管理密钥拉不了销售报告（forbidden）→ 另建「销售」密钥只读看数据；登记新密钥会抢默认，登记完 `asc auth switch` 切回
 - 商店分析（曝光 / 留存）要开 ONGOING 报告请求，苹果要管理员密钥 → 不为此建管理员密钥，改用 `asc web analytics`（用户自己登录输验证码）
 - asc 截图上传高峰期频繁 500 / 超时，`--replace` 并发会乱序缺张 → `--concurrency 1` 一组一组传，`asc screenshots list` 对 MD5，缺的单张补，别整组反复 replace
