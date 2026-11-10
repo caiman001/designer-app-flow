@@ -1,0 +1,16 @@
+{
+  "name": "designer-app-flow",
+  "owner": {
+    "name": "caiman001",
+    "url": "https://github.com/caiman001"
+  },
+  "description": "Workflow kit for building and shipping native iOS apps with Claude Code.",
+  "plugins": [
+    {
+      "name": "designer-app-flow",
+      "source": "./",
+      "description": "Scaffold a new iOS app project with agents, skills, docs and lessons learned: /designer-app-flow:new",
+      "version": "0.1.0"
+    }
+  ]
+}

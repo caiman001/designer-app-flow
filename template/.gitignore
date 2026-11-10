@@ -1,0 +1,38 @@
+.claude/*
+!.claude/settings.json
+!.claude/launch.json
+!.claude/skills/
+!.claude/agents/
+!.claude/agent-memory/
+.DS_Store
+
+# iOS 原生工程
+ios/build/
+ios/snapshots/
+ios/*Kit/.build/
+ios/**/xcuserdata/
+*.xcuserstate
+
+# 宣发成片、录屏（大文件，脚本能重出）
+marketing/**/final/
+design/promo/**/raw/
+design/promo/**/out/
+design/promo/**/build/
+design/store/out/
+
+# 画布本地预览缓存
+design/canvas/.preview/
+
+# 在子目录里跑工具时误建的 agent 记忆目录（正本只在仓库根的 .claude/agent-memory/）
+ios/.claude/
+design/**/.claude/
+
+# App Store Connect CLI 本地凭证（不进库）
+.asc/
+*.p8
+
+# 下载日报缓存（scripts/app-stats.py）
+scripts/.sales-cache/
+
+# 签了名的声明 PDF（手写签名不进库）
+docs/business/**/*.pdf

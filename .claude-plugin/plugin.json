@@ -1,0 +1,13 @@
+{
+  "name": "designer-app-flow",
+  "version": "0.1.0",
+  "description": "A designer's app workflow for shipping native iOS apps with Claude Code: 6 project agents (product, review, black-box QA, marketing, archivist, feedback), user-only release command, principles → decisions → single roadmap, App Store / China ICP checklists, and 150+ lessons learned from a real App Store launch. Docs are in Chinese.",
+  "author": {
+    "name": "caiman001",
+    "url": "https://github.com/caiman001"
+  },
+  "homepage": "https://github.com/caiman001/designer-app-flow",
+  "repository": "https://github.com/caiman001/designer-app-flow",
+  "license": "MIT",
+  "keywords": ["ios", "swiftui", "app-store", "agents", "workflow", "template", "testflight", "qa", "designer"]
+}
